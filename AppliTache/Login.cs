@@ -10,17 +10,15 @@ using System.Windows.Forms;
 
 namespace AppliTache
 {
-    public partial class Accueil : Form
+    public partial class Login : Form
     {
-        public Accueil()
+        public Login()
         {
             InitializeComponent();
-
         }
 
-        private void BAjoutTache_Click(object sender, EventArgs e)
+        private void labelLogin_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add("", "", "À faire");
 
         }
     }
