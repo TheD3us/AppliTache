@@ -33,12 +33,13 @@
             this.tache = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // BAjoutTache
             // 
-            this.BAjoutTache.Location = new System.Drawing.Point(334, 248);
+            this.BAjoutTache.Location = new System.Drawing.Point(357, 324);
             this.BAjoutTache.Name = "BAjoutTache";
             this.BAjoutTache.Size = new System.Drawing.Size(75, 23);
             this.BAjoutTache.TabIndex = 0;
@@ -54,7 +55,7 @@
             this.tache,
             this.description,
             this.statut});
-            this.dataGridView1.Location = new System.Drawing.Point(199, 40);
+            this.dataGridView1.Location = new System.Drawing.Point(222, 116);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(342, 202);
             this.dataGridView1.TabIndex = 1;
@@ -74,17 +75,28 @@
             this.statut.HeaderText = "Statut";
             this.statut.Name = "statut";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(258, 58);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 36);
+            this.label1.TabIndex = 2;
+            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BAjoutTache);
             this.Name = "Accueil";
             this.Text = "Accueil";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -95,6 +107,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tache;
         private System.Windows.Forms.DataGridViewTextBoxColumn description;
         private System.Windows.Forms.DataGridViewTextBoxColumn statut;
+        private System.Windows.Forms.Label label1;
     }
 }
 
