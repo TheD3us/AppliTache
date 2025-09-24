@@ -13,26 +13,30 @@ namespace AppliTache
 {
     public partial class Accueil : Form
     {
-        private string user_actuel;
+        private User user_actuel;
         public static List<Tache> taches = new List<Tache>();
 
-
-        public Accueil()
+        public Accueil(User user)
         {
             InitializeComponent();
-            RefreshDataGrid();
+            user_actuel = user;
 
+            // message de bienvenue
+            label1.Text = $"Bonjour {user_actuel.Pseudo} !";
+
+            RefreshDataGrid();
         }
+
         private void RefreshDataGrid()
         {
-            dataGridView1.DataSource = null;
-            foreach(Tache t in taches)
+            dataGridView1.Rows.Clear();
+
+            foreach (Tache t in taches)
             {
-                if(t.User.Pseudo == user_actuel)
+                if (t.User.Pseudo == user_actuel.Pseudo)
                 {
-                    dataGridView1.Rows.Add(t.Titre, t.Description, t.Statut, t.User);
+                    dataGridView1.Rows.Add(t.Titre, t.Description, t.Statut, t.User.Pseudo);
                 }
-                
             }
         }
 
@@ -42,7 +46,6 @@ namespace AppliTache
             formAjout.ShowDialog();
 
             RefreshDataGrid();
-
         }
     }
 }

@@ -22,8 +22,8 @@ namespace AppliTache
 
             users = new List<User>
             {
-                new User { Login = "bruno@mail.com", Mdp = "123", Pseudo = "Bmbuyi" },
-                new User { Login = "laura@mail.com", Mdp = "1234", Pseudo = "Ltexier" }
+                new User { Login = "bruno@mail.com", Mdp = "123", Pseudo = "Bruno" },
+                new User { Login = "laura@mail.com", Mdp = "1234", Pseudo = "Laura" }
             };
         }
 
@@ -37,14 +37,13 @@ namespace AppliTache
 
             if (user != null)
             {
-                // Succès
-                MessageBox.Show($"Bienvenue {user.Pseudo} !");
 
-                this.Hide(); 
-                var accueil = new Accueil();
+                this.Hide();
+                var accueil = new Accueil(user);
                 accueil.ShowDialog();
                 this.Close();
             }
+
             else
             {
                 // Échec 
