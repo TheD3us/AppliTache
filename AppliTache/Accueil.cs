@@ -15,6 +15,13 @@ namespace AppliTache
         public Accueil()
         {
             InitializeComponent();
+
+        }
+
+        private void BAjoutTache_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Add("", "", "À faire");
+
         }
     }
 }
