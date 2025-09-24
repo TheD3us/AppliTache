@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AppliTache.Model
 {
-    class Tache
+    public class Tache
     {
         private string titre;
         private string description;
