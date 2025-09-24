@@ -31,7 +31,7 @@
             this.BAjoutTache = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tache = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +52,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tache,
-            this.date,
+            this.description,
             this.statut});
             this.dataGridView1.Location = new System.Drawing.Point(199, 40);
             this.dataGridView1.Name = "dataGridView1";
@@ -64,10 +64,10 @@
             this.tache.HeaderText = "Tâche";
             this.tache.Name = "tache";
             // 
-            // date
+            // description
             // 
-            this.date.HeaderText = "Date limite";
-            this.date.Name = "date";
+            this.description.HeaderText = "Description";
+            this.description.Name = "description";
             // 
             // statut
             // 
@@ -93,7 +93,7 @@
         private System.Windows.Forms.Button BAjoutTache;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn tache;
-        private System.Windows.Forms.DataGridViewTextBoxColumn date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn description;
         private System.Windows.Forms.DataGridViewTextBoxColumn statut;
     }
 }
