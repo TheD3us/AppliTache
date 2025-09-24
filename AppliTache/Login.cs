@@ -7,19 +7,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppliTache.Model;
 
 namespace AppliTache
 {
     public partial class Login : Form
     {
+
+        private List<User> users;
+
         public Login()
         {
             InitializeComponent();
+
+            users = new List<User>
+            {
+                new User { Login = "bruno@mail.com", Mdp = "123", Pseudo = "Bmbuyi" },
+                new User { Login = "laura@mail.com", Mdp = "1234", Pseudo = "Ltexier" }
+            };
         }
 
-        private void labelLogin_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            string login = textBox1.Text.Trim();
+            string mdp = textBox2.Text;
 
+            // Vérification
+            var user = users.FirstOrDefault(u => u.Login == login && u.Mdp == mdp);
+
+            if (user != null)
+            {
+                // Succès
+                MessageBox.Show($"Bienvenue {user.Pseudo} !");
+
+                this.Hide(); 
+                var accueil = new Accueil();
+                accueil.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                // Échec 
+                label1.Text = "Email ou mot de passe incorrect.";
+                label1.ForeColor = System.Drawing.Color.Red;
+            }
         }
     }
 }
