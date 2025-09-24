@@ -11,7 +11,7 @@ namespace AppliTache.Model
         private string titre;
         private string description;
         private string statut;   // à faire, attribué, fini
-        // private User user;
+        private User user;
 
         public Tache()
         { }
@@ -31,6 +31,11 @@ namespace AppliTache.Model
 
         public string Statut
         { get; set; }
+
+        public User User
+        {
+            get; set;
+        }
 
 
     }

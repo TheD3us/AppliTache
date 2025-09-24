@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AppliTache.Model
 {
-    class User
+    public class User
     {
         private string login;
         private string mdp;
