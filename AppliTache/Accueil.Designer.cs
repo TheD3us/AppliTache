@@ -38,7 +38,7 @@
             // 
             // BAjoutTache
             // 
-            this.BAjoutTache.Location = new System.Drawing.Point(353, 261);
+            this.BAjoutTache.Location = new System.Drawing.Point(334, 248);
             this.BAjoutTache.Name = "BAjoutTache";
             this.BAjoutTache.Size = new System.Drawing.Size(75, 23);
             this.BAjoutTache.TabIndex = 0;
