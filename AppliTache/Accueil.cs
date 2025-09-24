@@ -33,10 +33,7 @@ namespace AppliTache
 
             foreach (Tache t in taches)
             {
-                if (t.User.Pseudo == user_actuel.Pseudo)
-                {
-                    dataGridView1.Rows.Add(t.Titre, t.Description, t.Statut, t.User.Pseudo);
-                }
+                dataGridView1.Rows.Add(t.Titre, t.Description, t.Statut); 
             }
         }
 
