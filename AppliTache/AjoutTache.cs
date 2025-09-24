@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppliTache.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,20 @@ namespace AppliTache
 
         private void label1_Click(object sender, EventArgs e)
         {
+        }
 
+        private void btnValider_Click(object sender, EventArgs e)
+        {
+            Tache tache = new Tache
+            {
+                Titre = nomTache.Text,
+                Description = descTache.Text,
+                Statut = "À faire",
+                //User = 
+            };
+
+            Accueil.taches.Add(tache);
+            this.Close();
         }
     }
 }

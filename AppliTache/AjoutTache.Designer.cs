@@ -46,6 +46,7 @@
             this.btnValider.TabIndex = 0;
             this.btnValider.Text = "Ajouter la tache";
             this.btnValider.UseVisualStyleBackColor = false;
+            this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
             // 
             // label1
             // 
